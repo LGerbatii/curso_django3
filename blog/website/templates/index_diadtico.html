@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Olá mundo</h1>
+    <ul>
+        {% for item in lista_tecnologia%}
+            {% if item == "Python" %}
+                <li><b>{{ item}}</b></li>
+            {% else %}
+                <li>{{ item}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+        {% for post in post %}
+        <hr>
+        <h1>{{ post.title }}</h1>
+        <h3>{{ post.subtitle }}</h3>
+        <p>{{ post.content }}</p>
+        
+         
+        {% endfor %}
+    
+</body>
+</html>
