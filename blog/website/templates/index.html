@@ -40,7 +40,7 @@
 						<div class="row">
                             {% for post in post %}
                                 <article class="col-6 col-12-xsmall work-item">
-                                    <a href="{% url 'post_detail' post.id %}" class=" fit thumb"><img src="{% static 'images/thumbs/01.jpg'%}" alt="" /></a>
+                                    <a href="{{post.imagem.url}}" class="image fit thumb"><img src="{{post.imagem.url}}" alt="" /></a>
                                     <h3>{{ post.title }}</h3>
                                     <p> {{ post.subtitle }}</p>
                                     <span>{{ post.get_categories_display }}</span>
