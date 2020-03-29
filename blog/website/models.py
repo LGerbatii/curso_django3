@@ -6,9 +6,6 @@ class Categorias(models.TextChoices):
     CR = 'CR', 'Curiosidade'
     GR = 'GR', 'Geral'
 
-    
-
-
 class Post(models.Model):
     title = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=200)
@@ -29,3 +26,8 @@ class Post(models.Model):
         return self.title + self.subtitle
 
     full_name.admin_order_field = 'title'
+
+class Contact(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    message = models.TextField()
